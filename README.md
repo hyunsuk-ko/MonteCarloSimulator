@@ -108,7 +108,7 @@ analyzer.face_count()
     
     
 ## Manifest
-Type below to your shell.
+Type below to your shell to checkout file listings.
 ```
 !ls -lR    
 ```

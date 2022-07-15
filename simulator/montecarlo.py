@@ -173,9 +173,9 @@ class Analyzer:
             #print()
             if (len(set(result_face)) == 1): # JACKPOT
                 self.jackpot_count += 1
-                curr_df = pd.DataFrame({'Combination' : sorted([result_face]), 'Jackpot': [1]})
+                curr_df = pd.DataFrame({'Combination' : [sorted(result_face)], 'Jackpot': [1]})
             else:
-                curr_df = pd.DataFrame({'Combination' : sorted([result_face]), 'Jackpot': [0]})
+                curr_df = pd.DataFrame({'Combination' : [sorted(result_face)], 'Jackpot': [0]})
             obj_jackpot_result =  pd.concat([obj_jackpot_result, curr_df])
         obj_jackpot_result.index = np.arange(len(obj_jackpot_result))
         self.all_jackpot_results = pd.concat([self.all_jackpot_results, obj_jackpot_result])
