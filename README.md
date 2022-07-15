@@ -43,12 +43,12 @@ analyzer.face_count()
 ### Die Class
 : A die has N sides, or “faces”, and W weights, and can be rolled to select a face. 
 
-<Attributes>
+#### Attributes
 - self.faces = faces
 - self.weights = [1.0] * len(faces)
 - self.df = pd.DataFrame({'faces': self.faces, 'weights': self.weights})
 
-<Methods>
+#### Methods
 - init(self, faces)
 : Takes an array of faces as an argument. The array's data type (dtype) may be strings or numbers. Internally iInitializes the weights to 1.0 for each face.
     
@@ -63,10 +63,11 @@ analyzer.face_count()
 
 ### Game Class
 : A game consists of rolling of one or more dice of the same kind one or more times. 
-<Attributes>
+
+#### Attributes
 - self.die_objs = die_objs
     
-<Methods>
+#### Methods
 - __init__(self, die_objs)
 : Takes a single parameter, a list of already instantiated similar Die objects.
     
@@ -81,7 +82,7 @@ analyzer.face_count()
 ### Analyzer Class
 : An analyzer takes the results of a single game and computes various descriptive statistical properties about it. These properties results are available as attributes of an Analyzer object. Attributes (and associated methods) include
     
-<Attributes>
+#### Attributes
 - self.game_obj = game_obj
 - self.die_objs = game_obj.die_objs
 - self.face_counts_per_roll = pd.DataFrame({'roll_number': [], 'face_count': []}) 
@@ -90,7 +91,7 @@ analyzer.face_count()
 - self.all_jackpot_results = pd.DataFrame({'Jackpot': [], 'Combination' : []})
     
     
-<Methods>
+#### Methods
 - __init__(self, game_obj)
 : Takes a game object as its input parameter. 
     
